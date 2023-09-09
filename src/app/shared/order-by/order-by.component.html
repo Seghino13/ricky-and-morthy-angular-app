@@ -1,0 +1,11 @@
+<div class="text-end">
+    <select class="select" (change)="orderBy(val.value)" #val>
+        <option selected>Order by</option>
+        <option 
+            *ngFor="let item of filterList" 
+            [value]="item.id"
+            [disabled]="item?.id === currentValue" >
+            {{item.value}}
+        </option>
+    </select>
+</div>

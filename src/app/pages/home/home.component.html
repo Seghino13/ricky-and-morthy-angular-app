@@ -1,0 +1,28 @@
+<section class="home">
+    <div class="home-container">
+        <img 
+            src="../../../assets/images/Rick-and-Morty.png" 
+            alt="ricky and morthy" 
+            class="home-container__image"
+        >
+        <input 
+            type="text" 
+            class="form-control home-container__input"
+            placeholder="Search..."
+           [(ngModel)]="searchResource"
+           (keyup)="search()"
+        >
+    </div>
+</section>
+<section class="container-filter">
+    <h6 class="container-filter-title">Search by:</h6>
+    <span class="container-filter-tag" *ngFor="let item of resoucesItems" (click)="changeResource(item)">
+        {{item}}
+    </span>
+ 
+</section>
+
+<section class="content">
+    <router-outlet></router-outlet>
+</section>
+

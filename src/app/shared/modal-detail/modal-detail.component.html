@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-ribbon" [ngClass]="{
+                'card-ribbon__alive': data?.status === 'Alive',
+                'card-ribbon__dead': data?.status === 'Dead'}">
+                {{data?.status}}
+            </div>
+            <div class="card-ribbon-chapter">
+                Chapter: {{data?.id}}
+            </div>
+            <div class="card-image-detail">
+                <img [src]="data?.image" style="width: 100%">
+            </div>
+            <div class="card-ribbon-name">
+                 Name: {{data?.name}} 
+            </div>
+            <div class="card-ribbon-gender">
+                Gender: {{data?.gender}} 
+            </div>
+            <div class="card-ribbon-location">
+                Location: {{data?.location?.name}} 
+            </div>
+            <div class="card-ribbon-species text-end">
+                Specie: {{data?.species}} 
+            </div>
+            
+        </div>
+    </div>
+</div>

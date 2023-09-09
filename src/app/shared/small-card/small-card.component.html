@@ -1,0 +1,26 @@
+<app-order-by [resources]="resources" *ngIf="resources"></app-order-by> 
+ <div class="row" *ngIf="resources">
+    <div class="col-md-3" *ngFor="let resource of resources | filterResource: search" (click)="select(resource)">
+        <div class="card">
+            <div class="card-ribbon" [ngClass]="{
+                'card-ribbon__alive': resource.status === 'Alive',
+                'card-ribbon__dead': resource.status === 'Dead'}">
+                {{resource.status}}
+            </div>
+            <div class="card-ribbon-chapter">
+                Chapter: {{resource.id}}
+            </div>
+            <div class="card-image" 
+                [ngStyle]="{'background-image': 'url('+resource.image+')'}">
+            </div>
+            <div class="card-container">
+                <h6 class="card-container__name">
+                    {{resource.name | slice: 0: 17}} 
+                    {{resource.name.length > 17 ? '...' : ''}}
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+

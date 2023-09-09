@@ -1,0 +1,19 @@
+
+<div class="text-end">
+    <h6 class="total">Show {{ page * 20 }} of {{info?.count}} {{resource}}s</h6>
+</div>
+<app-small-card [resources]="resourcesResult" *ngIf="resourcesResult" (selectItem)="selectItem($event, content)"></app-small-card>
+<div class="text-center">
+    <button type="button" class="btn btn-secondary" (click)="loadMore()"> Load more {{resource}}s</button>
+</div> 
+
+
+
+
+<!-- Modal detail -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-container text-end">
+        <button type="button" class="btn-close modal-container-x " aria-label="Close" (click)="d('Cross click')"></button>
+		<app-modal-detail [data]="itemSelected"></app-modal-detail>
+    </div>
+</ng-template>

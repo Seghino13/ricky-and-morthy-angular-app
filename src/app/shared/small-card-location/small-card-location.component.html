@@ -1,0 +1,20 @@
+
+ <div class="row" *ngIf="resources">
+    <div 
+        class="col-md-4" 
+        *ngFor="let resource of resources | filterLocation: search" 
+        (click)="select(resource)"
+    >
+        <div class="card">
+            <div class="card-ribbon-chapter">
+                {{resource.type}}
+            </div>
+            <div class="card-container">
+                <h6 class="card-container__name">
+                    {{resource.name | slice: 0: 17}} 
+                    {{resource.name.length > 17 ? '...' : ''}}
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>

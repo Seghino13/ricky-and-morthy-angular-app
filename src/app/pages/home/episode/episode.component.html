@@ -1,0 +1,8 @@
+<div class="text-end">
+    <h6 class="total">Show {{ page * 20 }} of {{info?.count}} {{resource}}s</h6>
+</div>
+
+<app-small-card-episodies [resources]="resourcesResult" *ngIf="resourcesResult" (selectItem)="selectItem($event)"></app-small-card-episodies>
+<div class="text-center">
+    <button type="button" class="btn btn-secondary" (click)="loadMore()"> Load more {{resource}}s</button>
+</div> 

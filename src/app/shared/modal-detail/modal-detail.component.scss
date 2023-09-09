@@ -1,0 +1,80 @@
+@import '../../../assets/styles/main.scss';
+.card{
+    box-shadow: none;
+    transition:none;
+    cursor:default;
+    &-image{
+        height: 200px;
+    }
+    &-ribbon{
+        position: absolute;
+        background-color: $color-dark-charcoal;
+        right: 5px;
+        top: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        padding: 0px 5px;
+        color: $color-white;
+        &__alive{
+            background-color: $color-turquoise-surf;
+        }
+        &__dead{
+            background-color: $color-smokey-topaz;
+        }
+    }
+    &-ribbon-chapter{
+        position: absolute;
+        background-color: $color-green-lizard;
+        right: 5px;
+        top: 50px;
+        font-size: 22px;
+        border-radius: 5px;
+        padding: 0px 5px;
+        color: $color-dark-charcoal;
+    }
+    &-ribbon-name{
+        background: #fffd9a;
+        margin: -140px 20px -4px;
+        font-size: 28px;
+        border-radius: 12px;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0px 12px;
+        box-shadow: 2px 1px 11px #333;
+    }
+    &-ribbon-gender{
+        background: $color-turquoise-surf;
+        margin: 12px 20px -4px;
+        font-size: 18px;
+        border-radius: 12px;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0px 12px;
+        box-shadow: 2px 1px 11px #333;
+    }
+
+    &-ribbon-location{
+        background: #c9426b;
+        margin: 22px 20px -4px;
+        font-size: 12px;
+        border-radius: 12px;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0px 12px;
+        color: $color-white;
+    }
+    &-ribbon-species{
+        position: absolute;
+        background: #e7a362;
+        margin: 22px 20px -4px;
+        font-size: 18px;
+        border-radius: 12px;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0px 12px;
+        color: $color-charleston-green;
+    }
+}
+.card:hover{
+    transform: none;
+}

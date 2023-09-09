@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@import './assets/styles/main.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+.home{
+    background-image: url(./assets/images/home-background-Large.jpeg);
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 6%;
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__image{
+            height: 280px;
+        }
+        &__input{
+            width: 300px;
+            &:focus{
+                box-shadow: 0px 0px 3px $color-dark-charcoal;
+            }
+            &::placeholder{
+                color: $color-dark-charcoal;
+            }
+        }
+    }
+}
+
+.container-filter{
+    background: $color-charleston-green;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-title{
+        color: $color-bright-gray;
+        font-weight: 300;
+    }
+    &-tag{
+        background-color: $color-green-lizard;
+        margin: 0px 10px;
+        padding: 1px 5px;
+        border-radius: 10px;
+        color: $color-dark-charcoal;
+        font-size: 13px;
+        margin-top: -8px;
+        font-size: 13px;
+        box-shadow: 0px 0px 3px #777373;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+}
+
+.content{
+    background-color: $color-dark-jungle-green;
+    padding: 20px 80px;
+}
+
+.card{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin: 10px 0;
+    box-shadow: 2px 3px 8px $color-dark-liver;
+    border: 0;
+    position: relative;
+    &-image{
+        height: 100px;
+        background-size: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    &-container{
+        padding: 5px;
+        &__name{
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    &-ribbon{
+        position: absolute;
+        background-color: $color-dark-charcoal;
+        right: 5px;
+        top: 2px;
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 0px 5px;
+        color: $color-white;
+        &__alive{
+            background-color: $color-turquoise-surf;
+        }
+        &__dead{
+            background-color: $color-smokey-topaz;
+        }
+    }
+    &-ribbon-chapter{
+        position: absolute;
+        background-color: $color-green-lizard;
+        right: 5px;
+        top: 80px;
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 0px 5px;
+        color: $color-dark-charcoal;
+    }
+    
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.btn-secondary{
+    background-color: $color-charleston-green;
+    border: 0;
+}
+.total{
+    color: $color-bright-gray;
+}
+
+.select{
+    background-color: $color-charleston-green;
+    border: 0;
+    margin: 7px 0;
+    padding: 3px 15px;
+    border-radius: 7px;
+    color: $color-auro-metal-saurus;
+    &:focus{
+        box-shadow: 0;
+    }
+}
+.modal-container{
+
+    &-x{
+        margin: 10px;
+    }
+}
